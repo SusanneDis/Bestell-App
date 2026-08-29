@@ -1,101 +1,67 @@
-# 🍔 Food Order Web App
+🍔 Food Order Web App
 
-Eine responsive Web-App zum Bestellen von Speisen und Getränken – mit dynamischem Warenkorb, Bestellbestätigung und Local Storage.
+A responsive web app for ordering food and drinks, featuring a dynamic shopping cart, order confirmation, and Local Storage persistence.
 
----
+📖 Description
 
-## 📖 Beschreibung
+This web application allows users to select main dishes, side dishes, and drinks, add them to their shopping cart, and place an order.
 
-Diese Webanwendung ermöglicht es Nutzer:innen, Hauptgerichte, Beilagen und Getränke auszuwählen, in den Warenkorb zu legen und eine Bestellung abzusenden.  
-Der Warenkorb bleibt beim Neuladen erhalten (Local Storage) und ist über ein modales `<dialog>`-Fenster oder eine Sidebar zugänglich.
+The cart contents are preserved when the page is reloaded using Local Storage and can be accessed via a native modal <dialog> or a sidebar.
 
-Die App legt großen Wert auf **Barrierefreiheit (ARIA)** und **Responsivität**.
+The app places a strong emphasis on accessibility (ARIA) and responsive design.
 
----
-
-## ✨ Features
-
-- ✅ Auswahl von Hauptgerichten, Beilagen & Getränken  
-- ✅ Dynamischer Warenkorb in Sidebar & Dialog  
-- ✅ Speicherung im Local Storage  
-- ✅ Responsives Design (Desktop & Mobile)  
-- ✅ Native `<dialog>`-Elemente mit Slide-in-Animation  
-- ✅ Tastatur- und Screenreader-Unterstützung (ARIA)  
-- ✅ Anzeige: *„Dein Warenkorb ist noch leer“*, wenn keine Artikel vorhanden sind  
-- ✅ Bestellbestätigung nach Klick auf „Jetzt bestellen“  
-
----
-
-## 🧱 Technologien
-
-- **HTML5**  
-- **CSS3 (Flexbox, calc(), Animationen)**  
-- **Vanilla JavaScript (ES6)**  
-- **Local Storage API**  
-- **ARIA Accessibility**
-
----
-
-## 📂 Projektstruktur
-
+✨ Features
+✅ Selection of main dishes, side dishes & drinks
+✅ Dynamic shopping cart in sidebar & dialog
+✅ Cart persistence using Local Storage
+✅ Responsive design (desktop & mobile)
+✅ Native <dialog> elements with slide-in animation
+✅ Keyboard and screen reader support (ARIA)
+✅ Displays "Your cart is empty" when no items have been added
+✅ Order confirmation after clicking "Place Order"
+🧱 Technologies
+HTML5
+CSS3 (Flexbox, calc(), animations)
+Vanilla JavaScript (ES6)
+Local Storage API
+ARIA Accessibility
+📂 Project Structure
 /food-order-app
 │
 ├── index.html
 ├── style.css
 ├── script.js
 ├── /assets
-│ ├── /icons
-│ └── /images
+│   ├── /icons
+│   └── /images
 └── README.md
+⚙️ Usage
 
+Download or clone the project:
 
----
+git clone https://github.com/deinname/food-order-app.git
+Open index.html in your browser.
+Select your food and drinks.
+Open the shopping cart using the cart button.
+Click "Place Order" → an order confirmation dialog will be displayed.
+🧩 Main Functions
+Function	Description
+addToCart(type, index)	Adds a product to the shopping cart
+renderCartContent(containerId)	Renders the cart content in the sidebar and dialog
+openCartDialog() / closeCartDialog()	Opens and closes the cart dialog
+sendOrder()	Displays the order confirmation and clears the cart
+saveToLocalStorage() / loadFromLocalStorage()	Saves and loads the cart from Local Storage
+🎨 Design Details
+Buttons provide visual feedback with a short scale animation when clicked
+The dialog smoothly slides in from the left
+An empty cart is clearly communicated to the user
+Consistent typography, spacing, and color contrast
+Responsive layout for desktop and mobile devices
+👩‍💻 Developer
 
-## ⚙️ Nutzung
+Susanne Di Sorbo
+📅 October 2025
 
-1. Lade das Projekt herunter oder klone es:
-   ```bash
-   git clone https://github.com/deinname/food-order-app.git
-2. Öffne index.html im Browser
+📜 License
 
-3. Wähle Speisen und Getränke aus
-
-4. Öffne den Warenkorb über den Button
-
-5. Klicke „Jetzt bestellen“ → Dialog mit Bestellbestätigung wird angezeigt
-
----
-
-## 🧩 Hauptfunktionen
-
-Funktion	Beschreibung
-addToCart(type, index)	Fügt Produkt in den Warenkorb hinzu
-renderCartContent(containerId)	Rendert Warenkorb-Inhalt (Sidebar + Dialog)
-openCartDialog() / closeCartDialog()	Öffnet/schließt das Dialogfenster
-sendOrder()	Zeigt Bestellbestätigung & leert Warenkorb
-saveToLocalStorage() / loadFromLocalStorage()	Speichert/Lädt den Warenkorb
-
----
-
-## 🎨 Design-Details
-
-Buttons reagieren beim Klick mit einer kurzen Scale-Animation
-
-Dialog slidet weich von links in den Viewport
-
-Leerer Warenkorb wird klar kommuniziert
-
-Einheitliche Schrift, Abstände & Kontraste
-
----
-
-## 👩‍💻 Entwickler:in
-
-[Susanne Di Sorbo]
-📅 Oktober 2025
-
----
-
-## 📜 Lizenz
-
-MIT License – frei nutzbar und anpassbar.
+MIT License – free to use and modify.
